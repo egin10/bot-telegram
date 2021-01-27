@@ -1,5 +1,8 @@
 {
     "name": "laravel/laravel",
+    "authors": [
+        "Ginanjar S.B"
+    ],
     "type": "project",
     "description": "The Laravel Framework.",
     "keywords": [
