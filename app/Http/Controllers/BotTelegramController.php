@@ -23,5 +23,8 @@ class BotTelegramController extends Controller
             'chat_id' => $chat_id, 
             'text' => 'Halo ' . $username 
         ]);
+
+        $phone_number = array_key_exists('contact', $updates['message']) ? $updates['message']['contact']['phone_number'] : null;
+        if($phone_number) return Telegram::sendMessage(['chat_id' => $chat_id, 'text' => 'Your phone number is ' . $phone_number]);
     }
 }
